@@ -23,8 +23,8 @@ themeBtn.addEventListener("click", function () {
 });
 
 function animateLlama() {
-  const [container] = document.getElementsByClassName("resume__block");
-  const llama = document.getElementById("llama");
+  let [container] = document.getElementsByClassName("resume__block");
+  let llama = document.getElementById("llama");
 
   const tl = anime.timeline({
     easing: "linear",
