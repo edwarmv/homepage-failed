@@ -26,6 +26,15 @@ body {
   max-width: 900px;
 }
 
+@keyframes run {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
 .fh {
   display: flex;
   flex-direction: row;
@@ -36,6 +45,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+#llama {
+  height: 40px;
+  position: absolute;
+  bottom: 0px;
 }
 
 .resume {
@@ -60,6 +75,7 @@ body {
   border-bottom: 3px solid var(--border-color);
   padding-bottom: 30px;
   margin-bottom: 15px;
+  position: relative;
 }
 
 @media screen and (max-width: 576px) {
