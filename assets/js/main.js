@@ -21,3 +21,35 @@ function toggleTheme(themeBtn) {
 themeBtn.addEventListener("click", function () {
   toggleTheme(this);
 });
+
+function animateLlama() {
+  const [container] = document.getElementsByClassName("resume__block");
+  const llama = document.getElementById("llama");
+
+  const tl = anime.timeline({
+    easing: "linear",
+    loop: true,
+    duration: 3500,
+  });
+
+  tl.add({
+    targets: "#llama",
+    translateX: container.offsetWidth - llama.offsetWidth,
+  })
+    .add({
+      targets: "#llama",
+      scaleX: -1,
+      duration: 300,
+    })
+    .add({
+      targets: "#llama",
+      translateX: 0,
+    })
+    .add({
+      targets: "#llama",
+      scaleX: 1,
+      duration: 300,
+    });
+}
+
+animateLlama();
